@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Barlow&family=Noto+Sans&family=Rubik&display=swap');
+html {
+    padding: 0;
+    margin: 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #121212;  
+}
+
+form { 
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 60%;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+    padding-top: 40px;
+}
+
+form > label {
+    margin: 15px auto;
+}
+
+#search-bar {
+    width: 60%;
+    margin: 15px auto;
+    font-size: 0.5em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#submit-btn {
+    width: 20%;
+    margin: 15px auto;
+    border-radius: 10px;
+    font-size: 0.5em;
+}
+
+.courses-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results-from-search {
+    display: block;
+    margin: 10px auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    
+}
+
+#courses-from-search {
+    width: 60%;
+    color: white;
+}
+
+#courses-from-search ul li {
+    list-style-type: none;
+    font-size: 1.2em;
+    background-color: gray; 
+    padding: 40px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+}
+
+#courses-from-search img {
+    display: block;
+    margin: 0 auto;
+
+}
+
+.header {
+    width: 25%;
+    background-color: darkgray;
+}
+
+.categories-visible {
+    margin: 0 auto;
+    width: 20em;
+    visibility:visible;
+    font-size: large;
+}
+
+.categories-hidden {
+    visibility: hidden;
+}
+
+#toggle-categories {
+    background-color: gray;
+    border: none;
+    padding: 0px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+#toggle-categories:hover {
+    color:white
+}
+
+.categories-button-hidden {
+    visibility: hidden;
+}
+
+#menu-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.menu-closed {
+    color: grey;
+}
+
+#menu-opened {
+    color: #121212;
+}
+
+.menu-wrap {
+    font-size: 1.2em;
+    font-weight: 800;
+    margin: 0;
+    top: 0;
+}
+
+.menu-wrap ul {
+    list-style-type: none;
+    margin: 0px
+}
+
+.menu-wrap ul li {
+    margin: 0 auto;
+    vertical-align: top;
+    margin-bottom: 20px;
+    background-color: grey;
+    width: 95%;
+}
+
+.menu-wrap ul li:hover {
+    width: 100%;
+}
+
+.menu-wrap ul li a:hover {
+    color: white;
+}
+
+.menu-wrap ul li a {
+    
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
+    padding:5px 20px;
+}
+
+#categories ul li {
+    display: block;
+    margin: 0px;
+    width: 90%;
+}
+
+#categories ul li a {
+    font-size: 0.7em;
+    padding:2px
+}
+
+#categories ul li a:hover {
+    color:white;
+}
+
+#menu-display {
+    position: fixed;
+}
+
+.display-off {
+    visibility: hidden;
+}
+
+.display-on {
+    width: 20%;
+    padding: 20px;
+}
+
+/* register.html */
+.registration-form {
+    background-color: gray;
+    font-size: 1.2em;
+    width: 30%;
+    border-radius: 50px;
+    padding: 30px;
+    text-align: left;
+}
+
+.registration-form>label {
+    margin: 0;
+    text-align: left;
+    padding: 10px;
+}
+
+#sign-up-text {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 900;
+}
+
+/*msg-off, msg-on gia na emfanizoume kai na eksafanizoume ta text*/
+.msg-off{
+    visibility: hidden;
+}
+
+.msg-on{
+   text-align: center; 
+   color: white;
+}
+
+.btn-return{
+    background-color: lightslategray;
+    border-radius: 25px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.msg-wrapper>p{
+    color: white;
+}
+
+.form-off{
+    visibility: hidden;
+}
+
+/*profile.html*/
+
+.login-wrapper{
+    color: white;
+    text-align: center;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.login-wrapper>label{
+    font-size: 0.7em;
+}
+
+.login-wrapper>form>input{
+    height: 40px;
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.5em;
+}
+
+#login-btn{
+    margin-top: 40px;
+    width: 30%;
+    border-radius: 25px;
+}
+
+.wrapper-off{
+    display: none;
+}
+
+#profile-info-wrapper {
+    color: white;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#profile-info-wrapper:hover {
+    width: 61%;
+}
+
+#profile-info-wrapper ul {
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    
+    margin: 0 auto;
+    background-color: #3b3a3a;
+    padding: 30px;
+    font-size: 1.7em;
+}
+
+#profile-info-wrapper ul li {
+    margin: 20px;
+}
+
+

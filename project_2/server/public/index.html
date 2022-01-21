@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>e-Learning</title>
+    <link rel="icon" href="img/e-Learngin.png" type="text/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+</head>
+
+<body>
+        <button id="menu-btn" class="menu-closed">Menu</button>
+        <div id="menu-display" class="display-off">
+            <nav class="menu-wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button id="toggle-categories">Categories</button>
+                        <div id="categories" class="categories-visible"></div>
+                    </li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="register.html">Sing Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    <script id="categories-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each categories}}
+            <li>
+                <a href="courses.html?category={{id}}">{{title}}</a>
+            </li>
+            {{/each}}
+        </ul>
+            
+    </script>
+
+    <form id="search">
+        <label for="search-bar">Search for your book...</label>
+        <input type="text" name="search-bar" id="search-bar">
+        <input type="button" value="Search" id="submit-btn">
+    </form>
+
+    <section>
+        <script id="courses-template-search" type="text/x-handlebars-template">
+            <ul>
+                {{#each data}}
+                <li>
+                    <img src="https://elearning-aueb.herokuapp.com/static/images/{{img}}" alt="{{id}} pic">
+                    <h1>Title: {{title}} ID: {{id}}</h1>
+                    <h2>Category: {{category}}</h2>
+                    <p>Objectives: {{objectives}}</p>
+                    <p>Description: {{description}}</p>
+                </li>
+                {{/each}}
+            </ul>
+        </script>
+    </section>
+    <section class="courses-wrap">
+        <p id="results-from-search"></p>
+        <section id="courses-from-search"></section>
+    </section>
+
+    <script src="search-book.js" type="text/javascript"></script>
+</body>
+
+</html>

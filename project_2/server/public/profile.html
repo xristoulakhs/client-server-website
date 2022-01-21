@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>e-Learning</title>
+    <link rel="icon" href="img/e-Learngin.png" type="text/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+</head>
+
+<body>
+        <button id="menu-btn" class="menu-closed">Menu</button>
+        <div id="menu-display" class="display-off">
+            <nav class="menu-wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <button id="toggle-categories">Categories</button>
+                        <div id="categories" class="categories-visible"></div>
+                    </li>
+                    <li><a href="profile.html">My Profile</a></li>
+                    <li><a href="register.html">Sing Up</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <script id="categories-template" type="text/x-handlebars-template">
+            <ul>
+                {{#each categories}}
+                <li>
+                    <a href="courses.html?category={{id}}">{{title}}</a>
+                </li>
+                {{/each}}
+            </ul>
+                
+        </script>
+
+        <div id="login-id" class="login-wrapper">
+            <form class="login-form">
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" required placeholder="Enter email...">
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required placeholder="Enter password...">
+
+                <input type="submit" id="login-btn" value="Log In">
+            </form>
+        </div>
+        <div id="profile-info-wrapper"></div>
+        <script id="profile-template" type="text/x-handlebars-template">
+            <ul>
+                <li>First Name: {{fname}}</li>
+                <li>Last Name: {{lname}}</li>
+                <li>Address: {{address}}</li>
+                <li>Phone: {{phone}}</li>
+                <li>Education Level: {{education}}</li>
+                <li>Email: {{email}}</li>
+            </ul>
+        </script>
+
+    <script src="search-book.js" type="text/javascript"></script>
+    <script src="profile.js" type="text/javascript"></script>
+</body>
+
+</html>
